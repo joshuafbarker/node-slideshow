@@ -1,0 +1,22 @@
+{
+  "name": "node-slideshow",
+  "version": "0.0.0",
+  "description": "A simple slideshow that randomly cycles images from a folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuafbarker/node-slideshow.git"
+  },
+  "author": "Joshua Barker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuafbarker/node-slideshow/issues"
+  },
+  "homepage": "https://github.com/joshuafbarker/node-slideshow#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
