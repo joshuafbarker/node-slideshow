@@ -15,14 +15,23 @@ document.addEventListener('keypress', (e) => {
   }
 }, false);
 
+const randomNum = (max) => {
+  return Math.floor(Math.random() * max);
+}
+
+const nextImage = (image) => {
+  const container = document.querySelector('.image-container');
+  container.style.backgroundImage = `url(http://localhost:8080/images/${image})`;
+} 
 
 // initial slideshow function
 const init = (data) => {
-  const container = document.querySelector('.image-container');
   const images = data;
-  const random = Math.floor(Math.random() * images.length);
+  nextImage(images[randomNum(images.length)]);
 
-  container.style.backgroundImage = `url(http://localhost:8080/images/${images[random]})`;
+  setInterval(() => {
+    nextImage(images[randomNum(images.length)]);
+  }, 30000);
 }
 
 // fetch images from server, and initialize the slideshow
